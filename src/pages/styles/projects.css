@@ -1,0 +1,130 @@
+/* ---------- New Projects Heading Section ---------- */
+.main-project-heading {
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+
+.projects-heading {
+	
+	font-size: 38px;
+	font-weight: 800;
+	/* color: #ffffff; Pure white for contrast */
+	color: black;
+	 font-family: "Bitstream Vera Serif Bold", serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center; /* center the heading */
+	margin: 0 auto; /* ensure it stays centered */
+	margin-bottom: 20px; /* space below heading */
+	padding-top: 0; /* remove extra top padding */
+	text-shadow: none; /* remove subtle glow if unnecessary */
+}
+
+.projects-subtitle-text {
+		font-size: 20px;
+	color: black;
+	margin-top: 15px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5;
+}
+
+/* ---------- Existing styles ---------- */
+.projects-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.projects-logo {
+	display: flex;
+	position: fixed;
+	border: 1px solid rgb(115, 4, 4);
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
+	z-index: 999;
+}
+
+.projects-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding-top: 120px;
+	
+}
+ 
+
+
+@media (max-width: 600px) {
+	.projects-container {
+		padding-top: 60px;
+	}
+
+	.projects-project {
+		width: calc(100% / 2);
+	}
+}
+
+
+
+
+.projects-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.projects-logo {
+	display: flex;
+	position: fixed;
+	border: 1px solid rgb(108, 31, 217);
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
+	z-index: 999;
+}
+
+.projects-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding-top: 120px;
+}
+
+@media (max-width: 600px) {
+	.projects-container {
+		padding-top: 60px;
+	}
+
+	.projects-project {
+		width: calc(100% / 2);
+	}
+}
+
+
+
+.projects-title {
+	margin-bottom: 10px; /* reduce gap below title */
+}
+
+.projects-subtitle {
+	margin-top: 5px; /* reduce gap above subtitle */
+	line-height: 1.4; /* tighter line spacing */
+	color: black;
+}
+.projects-container {
+	padding-top: 40px;
+	
+}
+.projects-container {
+	padding-top: 0px;
+}
+
+
+
+
