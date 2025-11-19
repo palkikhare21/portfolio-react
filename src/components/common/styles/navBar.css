@@ -8,13 +8,23 @@
 }
 
 .navbar {
-	display: flex;
+	/* display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
 	top: 3vh;
 	z-index: 999;
+	width: 100%; */
+
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
+	z-index: 999;
+	background: white; /* important so content doesn't show behind */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* optional clean shadow */
+	padding: 10px 0;
+
 }
 
 .nav-background {

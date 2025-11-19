@@ -6,6 +6,7 @@ body {
 	font-family: var(--primary-font);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	 padding-top: 100px;   /* space for fixed navbar */
 }
 
 code {

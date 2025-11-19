@@ -12,7 +12,7 @@
 }
 
 .project:hover {
-	background: #fafafa;
+	background: #b9d5f0;
 	opacity: 1;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -25,6 +25,13 @@
 .project-container {
 	padding: 30px;
 }
+.project-container {
+    padding: 30px;
+    border: 2px solid black;     /* thick black border */
+    border-radius: 16px;         /* rounded corners (optional) */
+    background: white;           /* clean background */
+}
+
 
 .project-logo {
 	width: 30px;

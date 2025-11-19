@@ -13,6 +13,7 @@
 	box-sizing: border-box;
 	padding: 10px;
 	overflow: hidden;
+	 margin: 20px;
 }
 
 @media (max-width: 600px) {
