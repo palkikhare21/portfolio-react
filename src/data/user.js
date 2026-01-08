@@ -35,8 +35,10 @@ const INFO = {
   },
   {
     title: "MediQueue – Doctor Appointment Management System",
-    description:
-      "A full-stack healthcare solution designed to eliminate waiting times. This MERN application allows patients to book appointments digitally while providing doctors with a dedicated dashboard to manage their schedules and patient flow in real-time.",
+    // description:
+    //   "A full-stack healthcare solution designed to eliminate waiting times. This MERN application allows patients to book appointments digitally while providing doctors with a dedicated dashboard to manage their schedules and patient flow in real-time.",
+	 description:
+	"An intelligent MERN-based healthcare platform that not only enables instant digital appointment booking but also uses AI to suggest the most suitable doctor, reducing waiting times and enhancing patient care.",
     image: "/doctor.png",
     linkText: "View Project",
     link: "https://github.com/palkikhare/mediqueue",
