@@ -1,7 +1,7 @@
 🚀 My Portfolio Website
 A modern, responsive personal portfolio built with ReactJS and custom CSS, deployed seamlessly via Vercel. This site showcases my journey, technical skills, and the projects I’ve built.
 
-🔗 View Live Demo
+🔗 View Live Demo - https://palkikhare.vercel.app/
 
 🛠 Tech Stack
 Frontend: React.js
