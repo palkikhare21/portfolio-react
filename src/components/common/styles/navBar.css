@@ -1,118 +1,172 @@
 @import "../../../data/styles.css";
 
+
+/* Main wrapper that stays fixed at the top */
 .nav-container {
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Glass effect on white background */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* The inner bar that keeps content aligned */
 .navbar {
-	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 3vh;
-	z-index: 999;
-	width: 100%; */
-
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 999;
-	background: white; /* important so content doesn't show behind */
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* optional clean shadow */
-	padding: 10px 0;
-
+    width: 100%;
+    max-width: 1200px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+     background: #e6e6eb;
 }
 
 .nav-background {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 30px;
-	width: 100%;
-	max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
+
+/* Logo Styling */
 .nav-left .nav-logo {
-	font-size: 20px;
-	font-weight: 700;
-	/* color: white; */
-	color: black;
-	font-family: "Bitstream Vera Serif Bold";
-	cursor: pointer;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a1a;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
+
+/* Navigation Links */
 .nav-list {
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	align-items: center;
-	gap: 25px;
-	margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item {
-	font-weight: bold;
-	font-size: 90%;
-}
-
-.nav-item.active a {
-	color: var(--link-color) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .nav-item a {
-	text-decoration: none;
-	color: var(--primary-color);
+    text-decoration: none;
+    color: #666666; /* Gray for inactive links */
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Purple underline hover effect */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #7c3aed; /* Your purple accent */
+    transition: width 0.3s ease;
+}
+
+.nav-item.active a {
+    color: #1a1a1a !important;
+}
+
+.nav-item.active a::after,
+.nav-item a:hover::after {
+    width: 100%;
 }
 
 .nav-item a:hover {
-	color: var(--link-color);
-	transition: color 0.3s ease-in-out;
+    color: #1a1a1a;
 }
-/* ---------- NEW: Resume button ---------- */
+
+/* Resume Button Styling */
 .nav-right .resume-btn {
-	padding: 8px 16px;
-	background-color: var(--primary-color);
-	color: white;
-	border-radius: 6px;
-	text-decoration: none;
-	font-weight: 500;
-	transition: 0.3s;
+    padding: 10px 24px;
+    background: #1a1a1a; /* Dark button on white background */
+    color: #ffffff !important;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
 }
 
 .nav-right .resume-btn:hover {
-	background-color: var(--link-color);
-	transform: scale(1.05);
+    background: #7c3aed; /* Turns purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
 }
 
-/* ---------- Responsive adjustments ---------- */
-@media (max-width: 600px) {
-	.navbar {
-		margin-left: 0;
-		margin-right: 0;
-		width: 100%;
-		font-size: 80%;
-	}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: 65px;
+    }
+    
+    .nav-list {
+        gap: 15px;
+    }
+    
+    .nav-item {
+        font-size: 0.8rem;
+    }
+    
+    .nav-right .resume-btn {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+}
 
-	.nav-background {
-		flex-direction: column;
-		gap: 10px;
-		padding: 10px;
-	}
+.tech-category-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+    margin: 40px 0 20px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-	.nav-list {
-		gap: 10px;
-	}
+/* Small purple dot before category titles for style */
+.tech-category-title::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #7c3aed;
+    border-radius: 50%;
+    display: inline-block;
+}
 
-	.nav-left .nav-logo {
-		font-size: 18px;
-	}
+.tech-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    padding: 25px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
 
-	.nav-right .resume-btn {
-		padding: 6px 12px;
-		font-size: 14px;
-	}
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-color: #7c3aed;
+    /* Soft purple glow */
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.08);
 }

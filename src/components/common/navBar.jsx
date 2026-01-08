@@ -40,7 +40,7 @@ const NavBar = (props) => {
 					{/* Right Side - Resume Button */}
 					<div className="nav-right">
 						<a
-							href="https://drive.google.com/your-resume-link"
+							href="/resume.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="resume-btn"

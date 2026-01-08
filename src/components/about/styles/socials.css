@@ -2,7 +2,7 @@
 .social,
 .email-wrapper {
 	display: flex;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 }
 
 .social a,
@@ -23,14 +23,7 @@
 	font-size: 14px;
 }
 
-.email::before {
-	content: "";
-	display: block;
-	padding-top: 20px;
-	border-top: 3px solid #f4f4f5;
-	margin-top: 20px;
-}
 
 .email-wrapper {
-	padding-top: 20px;
+	padding-top: 0px;
 }

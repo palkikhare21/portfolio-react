@@ -5,22 +5,29 @@ import INFO from "../../data/user";
 
 import "./styles/logo.css";
 
-const Logo = (props) => {
-	let { width, link } = props;
+// const Logo = (props) => {
+// 	let { width, link } = props;
 
-	if (link === undefined) {
-		link = true;
-	}
+// 	if (link === undefined) {
+// 		link = true;
+// 	}
 
-	const imageElement = (
-		<img src={INFO.main.logo} alt="logo" className="logo" width={width} />
-	);
+// 	const imageElement = (
+// 		<img src={INFO.main.logo} alt="logo" className="logo" width={width} />
+// 	);
 
-	return (
-		<React.Fragment>
-			{link ? <Link to="/">{imageElement}</Link> : imageElement}
-		</React.Fragment>
-	);
+// 	return (
+// 		<React.Fragment>
+// 			{link ? <Link to="/">{imageElement}</Link> : imageElement}
+// 		</React.Fragment>
+// 	);
+// };
+
+
+
+const Logo = () => {
+    return null; // renders nothing
 };
+
 
 export default Logo;

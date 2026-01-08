@@ -1,41 +1,157 @@
-.contact-logo-container {
-	display: flex;
-	justify-content: left;
-	padding-top: 25px;
+
+/* @import "../../../data/styles.css"; */
+@import "../../data/styles.css";
+
+/* 1. Main Layout: Fixed the shift and created the two-column grid */
+.contact-container-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 140px 20px 80px 20px; /* Increased top padding for fixed navbar */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.contact-logo {
-	display: flex;
-	position: fixed;
-	border: 1px solid white;
-	border-radius: 50%;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-	top: 4vh;
+/* 2. Left Side: Text and Info */
+.contact-left-side {
+    flex: 1.2;
+    text-align: left;
+}
+
+.contact-title {
+    font-size: 4rem; /* Slightly larger for impact */
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff !important; /* Pure white for dark background */
+    margin-bottom: 25px;
+}
+
+/* The "extraordinary" blue highlight */
+.highlight {
+    color: #3b82f6; 
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .contact-subtitle {
-	width: 100% !important;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7) !important; /* Muted light gray for readability */
+    margin-bottom: 45px;
+    max-width: 550px;
 }
 
-.contact-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	margin-top: 120px;
+/* Info Blocks: Location and Status */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-
-.socials-container {
-	display: flex;
-	flex-direction: column;
-	margin-top: 80px;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 20px;           /* space between icons */
-	margin-top: 40px; 
+.info-item h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4); /* Dimmed label */
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
+.info-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff !important; /* Bright white for values */
+}
 
+/* 3. Right Side: The Form Card (Kept white as per your screenshot) */
+.contact-right-side {
+    flex: 0.8;
+}
 
+.contact-form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 28px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.form-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
 
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a; /* Dark text for white card */
+    text-align: left;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* 4. The Action Button */
+.contact-submit-btn {
+    width: 100%;
+    background-color: #0f172a; /* Dark sleek button */
+    color: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #3b82f6; /* Blue hover */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+    .contact-container-grid {
+        flex-direction: column;
+        padding-top: 100px;
+        gap: 40px;
+    }
+    
+    .contact-left-side {
+        width: 100%;
+    }
+
+    .contact-title {
+        font-size: 2.8rem;
+    }
+
+    .contact-right-side {
+        width: 100%;
+    }
+}

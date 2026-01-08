@@ -46,13 +46,10 @@ const Projects = () => {
 						</div>
 					</div>
 					<div className="projects-container">
-						{/* <div className="title projects-title">
-							Things I’ve made trying to put my dent in the
-							universe.
-						</div> */}
+						
 
 						<div className="subtitle projects-subtitle">
-							“Crafting modern, high-performance web applications with a focus on functionality, design, and impact.”
+							"Full-stack developer specializing in the MERN stack to build scalable web applications. <br /> My recent work includes Apan Intern, a multi-user job portal connecting companies with students, and MediQueue, a healthcare management system designed to streamline doctor-patient scheduling."
 						</div>
 
 						<div className="projects-list">

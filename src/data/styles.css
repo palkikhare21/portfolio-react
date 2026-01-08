@@ -1,14 +1,20 @@
-:root {
-	/* ------- colors ------- */
-	--primary-color: #27272a;
-	--secondary-color: #65656d;
-	--tertiary-color: #acacb4;
-	--quaternary-color: #e4e4e7;
-	--link-color: #14b8a6;
-	/* ---------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-	/* ------- fonts ------- */
+
+
+:root {
+	
+    --primary-color: #020617;    
+    --secondary-color: #475569;  
+    --tertiary-color: #64748b;   
+    --quaternary-color: #f1f5f9; 
+    --link-color: #2563eb;    
+	--bg-gradient: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 	--primary-font: "Heebo", sans-serif;
 	--secondary-font: "Roboto", sans-serif;
-	/* --------------------- */
+	
+}
+
+body {
+  font-family: "Inter", "Poppins", system-ui, sans-serif;
 }

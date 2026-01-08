@@ -1,159 +1,236 @@
 @import "../../data/styles.css";
 
-.homepage-logo-container {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding-top: 130px;
-}
 
+/* 1. Main Container Logic */
 .homepage-container {
-	padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-.homepage-first-area {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.homepage-first-area-left-side {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+/* 2. Hero Section (The Top Part) */
+.homepage-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh; /* Adjusts height based on content */
+    padding: 140px 20px 60px 20px; /* Space for fixed navbar */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .homepage-title {
-	width: 85% !important;
+    font-size: 4.5rem; /* Large and bold */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    /* Fixed Gradient Text Effect */
+    background: linear-gradient(to right, #ffffff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .homepage-subtitle {
-	width: 85% !important;
+    font-size: 1.15rem;
+    max-width: 750px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 40px;
 }
 
-.homepage-first-area-right-side {
-	display: flex;
-	align-items: center;
+/* 3. Action Buttons */
+.homepage-cta-btns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
 }
 
-.homepage-image-container {
-	width: 370px;
-	height: 370px;
+.btn-primary {
+    background: #7c3aed;
+    padding: 14px 35px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
 }
 
-.homepage-image-wrapper {
-	overflow: hidden;
-	border-radius: 10%;
-	transform: rotate(3deg);
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: #6d28d9;
 }
 
-.homepage-image-wrapper img {
-	width: 100%;
+.btn-secondary {
+    padding: 14px 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+}
+
+/* 4. Tab Switcher Styles */
+.tab-container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 5px;
+}
+
+.tab-item {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 5. Content Areas */
+.homepage-projects {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 50px;
 }
 
 .homepage-socials {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding-top: 30px;
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
 }
 
 .homepage-social-icon {
-	padding-right: 20px;
-	font-size: 25px;
-	transition: color 0.2s ease-in-out;
-	color: var(--secondary-color);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
 }
 
 .homepage-social-icon:hover {
-	color: var(--primary-color);
+    color: #a855f7;
+    transform: scale(1.1);
 }
 
-.homepage-after-title {
-	display: flex;
+/* 6. Responsive Fixes */
+@media (max-width: 768px) {
+    .homepage-title {
+        font-size: 2.8rem;
+    }
+    
+    .homepage-cta-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-.homepage-projects {
-	flex-basis: 300px;
-	padding-top: 40px;
-	color: rgb(3, 45, 89);
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.tech-stack-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.homepage-articles {
-	flex-basis: 900px;
-	padding-top: 30px;
-	margin-left: -30px;
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
 }
 
-.homepage-article {
-	padding-bottom: 5px;
+.tech-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 30px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
 }
 
-.homepage-works {
-	flex-basis: 600px;
-	padding-top: 30px;
+.tech-card-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
 }
 
-@media (max-width: 1024px) {
-	.homepage-first-area {
-		flex-direction: column;
-	}
+.tech-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%); /* Keeps the grid looking clean */
+    transition: 0.3s ease;
+}
 
-	.homepage-first-area-left-side {
-		 margin-top: 100px; 
-		display: flex;
-		flex-direction: column; /* Changed: set direction to column */
-		align-items: flex-start;
-		width: 100%;
-		order: 2;
-	}
+.tech-card-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444;
+}
 
-	.homepage-title {
-		width: 100% !important;
-		margin-top: 20px;
-		order: 2;
-		 
-	}
+/* Hover Effects */
+.tech-card:hover {
+    transform: translateY(-10px);
+    border-color: #7c3aed; /* Your purple accent */
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.1);
+}
 
-	.homepage-subtitle {
-		/* width: 100% !important;
-		margin-top: 10px;
-		order: 3; */
+.tech-card:hover .tech-card-icon img {
+    filter: grayscale(0%); /* Color comes back on hover */
+    transform: scale(1.1);
+}
 
-		font-size: 18px;
-    color: black;
-    margin-top: 20px;
-    line-height: 1.5;
-	}
+/* Mobile Tweak */
+@media (max-width: 600px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+.homepage-title {
+    /* ... existing properties ... */
+    color: #ffffff !important; /* Forces title to be pure white */
+}
 
-	.homepage-first-area-right-side {
-		width: 100%;
-		order: 1;
-	}
+.homepage-subtitle {
+    /* ... existing properties ... */
+    color: rgba(255, 255, 255, 0.7) !important; /* Soft light gray for readability */
+}
 
-	.homepage-image-container {
-		padding-top: 50px;
-		padding-bottom: 50px;
-		margin-left: 10px;
-		order: 1;
-	}
-
-	.homepage-after-title {
-		flex-direction: column;
-	}
-
-	.homepage-projects {
-		flex-basis: auto;
-	}
-
-	.homepage-articles {
-		flex-basis: auto;
-	}
-
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
-	}
+/* Fix for the Location/Email labels in the contact section */
+.homepage-socials, .contact-label {
+    color: #ffffff;
 }

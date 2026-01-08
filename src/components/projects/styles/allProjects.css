@@ -1,23 +1,87 @@
+
+/* ================= PROJECTS GRID ================= */
+
 .all-projects-container {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	margin-left: -35px;
-	margin-right: -35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    width: 100%;
+    padding: 20px 0;
 }
 
+/* REMOVE width hacks – grid handles layout */
 .all-projects-project {
-	width: calc(100% / 3);
-	box-sizing: border-box;
-	padding: 10px;
-	overflow: hidden;
-	 margin: 20px;
+    box-sizing: border-box;
 }
+
+/* ================= PROJECT CARD ================= */
+
+.project {
+    background: #f5efff; /* light purple */
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+/* Hover effect */
+.project:hover {
+    background: #ffffff; /* turn white on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+/* ================= IMAGE ================= */
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+/* ================= TEXT ================= */
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000; /* black */
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #000000; /* black */
+    line-height: 1.5;
+    margin-bottom: 14px;
+
+    /* IMPORTANT: remove underline */
+    text-decoration: none;
+}
+
+/* ================= LINK ================= */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6b21a8;
+    text-decoration: none; /* NO underline */
+}
+
+/* Force remove underline globally inside project */
+.project a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
-	.all-projects-project {
-		width: calc(100% / 2);
-	}
+    .project-image {
+        height: 150px;
+    }
 }

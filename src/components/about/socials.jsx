@@ -19,11 +19,11 @@ const Socials = () => {
 				<a href={INFO.socials.twitter} target="_blank" rel="noreferrer">
 					<div className="social-icon">
 						<FontAwesomeIcon
-							icon={faTwitter}
+							// icon={faTwitter}
 							className="social-icon"
 						/>
 					</div>
-					<div className="social-text">Follow on Twitter</div>
+					<div className="social-text">TWITTER</div>
 				</a>
 			</div>
 
@@ -31,11 +31,11 @@ const Socials = () => {
 				<a href={INFO.socials.github} target="_blank" rel="noreferrer">
 					<div className="social-icon">
 						<FontAwesomeIcon
-							icon={faGithub}
+							// icon={faGithub}
 							className="social-icon"
 						/>
 					</div>
-					<div className="social-text">Follow on GitHub</div>
+					<div className="social-text">GITHUB</div>
 				</a>
 			</div>
 
@@ -47,30 +47,13 @@ const Socials = () => {
 				>
 					<div className="social-icon">
 						<FontAwesomeIcon
-							icon={faLinkedin}
+							// icon={faLinkedin}
 							className="social-icon"
 						/>
 					</div>
-					<div className="social-text">Follow on LinkedIn</div>
+					<div className="social-text">LINKEDIN</div>
 				</a>
-			</div>
-
-			<div className="social">
-				<a
-					href={INFO.socials.instagram}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faInstagram}
-							className="social-icon"
-						/>
-					</div>
-					<div className="social-text">Follow on Instagram</div>
-				</a>
-			</div>
-
+			</div>	
 			<div className="email">
 				<div className="email-wrapper">
 					<a

@@ -1,15 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Roboto:wght@500&display=swap");
 @import "./data/styles.css";
 
-body {
+ /* body {
 	margin: 0;
 	font-family: var(--primary-font);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	 padding-top: 100px;   /* space for fixed navbar */
-}
+	 padding-top: 10px;
+ } 
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+} */
+
+#root {
+  
+ min-height: 100vh;
+  padding-top: 10px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(124, 58, 237, 0.18),
+      transparent 55%
+    ),
+    #151522;
+
+	min-height: 100vh;
+  padding-top: 10px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(124, 58, 237, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(124, 58, 237, 0.08),
+      transparent 60%
+    ),
+    #151522;
+}
+
+:root {
+  
+ 
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5f5;
+  --accent-purple: #7c3aed;
+}
+
+
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 span {
+  color: var(--accent-purple);
+}
+
+p {
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.7;
+}
+
+
+button,
+.btn-primary {
+  background: var(--accent-purple);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-weight: 500;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
 }
