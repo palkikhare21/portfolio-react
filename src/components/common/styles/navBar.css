@@ -1,172 +1,115 @@
-@import "../../../data/styles.css";
-
-
-/* Main wrapper that stays fixed at the top */
-.nav-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    /* Glass effect on white background */
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 66px;
+  padding: 0 6%;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(7,9,15,0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  animation: navIn 0.6s ease forwards;
 }
 
-/* The inner bar that keeps content aligned */
-.navbar {
-    width: 100%;
-    max-width: 1200px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-     background: #e6e6eb;
+@keyframes navIn {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.nav-background {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+.nav-logo a {
+  font-family: var(--mono);
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
 }
 
-/* Logo Styling */
-.nav-left .nav-logo {
-    font-size: 20px;
-    font-weight: 800;
-    color: #1a1a1a;
-    font-family: "Inter", sans-serif;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.nav-logo-bracket { color: var(--muted2); }
+.nav-logo-name {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
 }
 
-/* Navigation Links */
-.nav-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    align-items: center;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
+.nav-links {
+  display: flex; align-items: center; gap: 6px;
+  list-style: none;
 }
 
-.nav-item {
-    font-weight: 600;
-    font-size: 0.9rem;
+.nav-links li a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  transition: all 0.2s;
+  position: relative;
 }
 
-.nav-item a {
-    text-decoration: none;
-    color: #666666; /* Gray for inactive links */
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 5px 0;
+.nav-links li a:hover { color: var(--cyan); background: rgba(0,229,255,0.06); }
+.nav-links li.active a { color: var(--cyan); }
+
+.nav-cta {
+  padding: 8px 20px !important;
+  border: 1px solid var(--border2) !important;
+  color: var(--cyan) !important;
+  transition: all 0.25s !important;
+  display: inline-flex !important;
+  align-items: center; justify-content: center;
 }
 
-/* Purple underline hover effect */
-.nav-item a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #7c3aed; /* Your purple accent */
-    transition: width 0.3s ease;
+.nav-cta:hover {
+  background: var(--cyan) !important;
+  color: var(--bg) !important;
+  box-shadow: var(--glow-c) !important;
+  -webkit-text-fill-color: var(--bg) !important;
 }
 
-.nav-item.active a {
-    color: #1a1a1a !important;
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 6px;
 }
 
-.nav-item.active a::after,
-.nav-item a:hover::after {
-    width: 100%;
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--cyan); border-radius: 2px; transition: all 0.3s;
 }
 
-.nav-item a:hover {
-    color: #1a1a1a;
+/* Mobile Nav Overlay */
+.mob-nav {
+  position: fixed; inset: 0;
+  background: rgba(7,9,15,0.97);
+  z-index: 490;
+  display: none;
+  flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 36px;
 }
 
-/* Resume Button Styling */
-.nav-right .resume-btn {
-    padding: 10px 24px;
-    background: #1a1a1a; /* Dark button on white background */
-    color: #ffffff !important;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
+.mob-nav.open { display: flex; }
+
+.mob-nav a {
+  font-family: var(--sans);
+  font-size: 2.2rem; font-weight: 800;
+  color: var(--text); text-decoration: none;
+  transition: color 0.2s;
 }
 
-.nav-right .resume-btn:hover {
-    background: #7c3aed; /* Turns purple on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
+.mob-nav a:hover { color: var(--cyan); }
+
+.mob-close {
+  position: absolute; top: 24px; right: 6%;
+  font-size: 1.6rem; cursor: pointer;
+  color: var(--muted2); background: none; border: none;
+  transition: color 0.2s;
 }
 
-/* Mobile Responsiveness */
+.mob-close:hover { color: var(--cyan); }
+
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0 20px;
-        height: 65px;
-    }
-    
-    .nav-list {
-        gap: 15px;
-    }
-    
-    .nav-item {
-        font-size: 0.8rem;
-    }
-    
-    .nav-right .resume-btn {
-        padding: 8px 14px;
-        font-size: 0.75rem;
-    }
-}
-
-.tech-category-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #111;
-    margin: 40px 0 20px 0;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Small purple dot before category titles for style */
-.tech-category-title::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: #7c3aed;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.tech-card {
-    background: #ffffff;
-    border: 1px solid #f0f0f0;
-    padding: 25px 15px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.tech-card:hover {
-    transform: translateY(-5px);
-    border-color: #7c3aed;
-    /* Soft purple glow */
-    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.08);
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
 }

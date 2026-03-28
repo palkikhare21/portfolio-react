@@ -1,108 +1,71 @@
 const INFO = {
 	main: {
-		title: "Portfolio | Palki Khare",
+		title: "Palki Khare — Portfolio",
 		name: "Palki Khare",
-		email: "palkikhare2@gmail.com",
+		email: "erpalkikhare21@gmail.com",
 	},
 
 	socials: {
 		twitter: "https://x.com/PalkiKhare32820/",
 		github: "https://github.com/palkikhare21",
-		linkedin: "https://www.linkedin.com/in/palki-khare-a5108b257/",
+		linkedin: "https://www.linkedin.com/in/palkikhare",
 	},
 
 	homepage: {
-		title: "Palki Khare | MERN Stack Developer",
+		title: "Palki Khare | Full Stack Developer",
 		description:
-			"Hi, I’m Palki Khare. I specialize in building robust, scalable web applications from the ground up. By combining the power of the MERN stack with a deep understanding of Data Structures and Algorithms, I build digital products that are as efficient as they are user-friendly.",
+			"A passionate Full Stack Developer building modern web apps. Currently working on DID authentication with Django & Web3. I love turning complex problems into elegant digital solutions.",
 	},
 
 	about: {
-		title: "Palki Khare — Full-Stack Developer",
+		title: "Palki Khare — Full Stack Developer",
 		description:
-			"I architect and build scalable, high-performance web applications. My expertise lies in the MERN stack, where I transform complex business logic into seamless, user-friendly digital experiences,I specialize in creating end-to-end solutions—from multi-user recruitment portals and dynamic healthcare systems to intelligent social platforms. I am committed to writing clean, maintainable code and building products that solve real-world problems with efficiency and precision.",
+			"Hey! I'm Palki Khare, a Computer Science undergraduate with a deep passion for building full-stack web applications that are fast, functional, and beautifully designed. I'm currently interning and building a DID (Decentralised Identity) authentication system — a MetaMask wallet signature-based login using Django and the eth-account library. It's my first deep-dive into Web3 + traditional backend engineering. When I'm not coding, I'm learning new technologies, collaborating on team projects, and looking for the next problem worth solving.",
 	},
 
 	projects: [
-  {
-    title: "Apan Intern - Job Search Platform",
-    description:
-      "A comprehensive recruitment platform built with the MERN stack. It features a dual-user interface where companies can manage job postings and students can seamlessly search and apply for internships. Integrated secure authentication and a dynamic application tracking system.",
-    linkText: "View project",
-    link: "https://apnaintern.onrender.com",
-    image: "/apanintern.png",
-
-  },
-  {
-    title: "MediQueue – Doctor Appointment Management System",
-    // description:
-    //   "A full-stack healthcare solution designed to eliminate waiting times. This MERN application allows patients to book appointments digitally while providing doctors with a dedicated dashboard to manage their schedules and patient flow in real-time.",
-	 description:
-	"An intelligent MERN-based healthcare platform that not only enables instant digital appointment booking but also uses AI to suggest the most suitable doctor, reducing waiting times and enhancing patient care.",
-    image: "/doctor.png",
-    linkText: "View Project",
-    link: "https://github.com/palkikhare/mediqueue",
-  },
-  {
-    title: "AI-Based Group Dining Matcher",
-    description:
-      "An AI-driven social platform designed to bridge the gap between digital interaction and real-life community. The application leverages intelligent matching algorithms to curate groups of six individuals based on shared interests and proximity, facilitating seamless meetups at local venues.",
-    image: "6dining.png",
-    linkText: "View Project",
-    link: "https://github.com/palkikhare/group-dining-matcher",
-  },
-],
-
-
-
-	// ✅ STACK (NO CHANGE)
-	stack: [
 		{
-			name: "React",
-			category: "frontend",
-			logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+			title: "DID Authentication System",
+			description:
+				"MetaMask wallet signature-based login gate built with Django. Uses a challenge-response flow — Django generates a structured challenge, the user signs it via MetaMask, and Django verifies the signature using eth-account.",
+			linkText: "View on GitHub",
+			link: "https://github.com/palkikhare21",
 		},
 		{
-			name: "Tailwind CSS",
-			category: "frontend",
-			logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+			title: "ApnaIntern — Job & Internship Portal",
+			description:
+				"A full-featured internship and job search portal built as a group project. Features company listings, search & filters, user authentication, and application management. Deployed on Render.",
+			linkText: "View Live",
+			link: "https://apnaintern.onrender.com",
 		},
 		{
-			name: "Next.js",
-			category: "frontend",
-			logo: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
-		},
-		{
-			name: "Node.js",
-			category: "backend",
-			logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
-		},
-		{
-			name: "Express.js",
-			category: "backend",
-			logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
-		},
-		{
-			name: "MongoDB",
-			category: "backend",
-			logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
-		},
-		{
-			name: "JavaScript",
-			category: "language",
-			logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-		},
-		{
-			name: "Git",
-			category: "tool",
-			logo: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
-		},
-		{
-			name: "C++",
-			category: "language",
-			logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+			title: "Personal Portfolio",
+			description:
+				"My personal portfolio website built with React.js and custom CSS. Fully responsive with smooth animations, project showcase, and a clean modern design. Deployed on Vercel.",
+			linkText: "View on Vercel",
+			link: "https://palkikhare.vercel.app",
 		},
 	],
+
+	stack: [
+        { name: "Python", category: "language", icon: "🐍" },
+        { name: "JavaScript", category: "language", icon: "⚡" },
+        // { name: "Java", category: "language", icon: "☕" },
+        { name: "C++", category: "language", icon: "⚙️" },
+        // { name: "SQL", category: "language", icon: "🗄️" },
+        { name: "HTML / CSS", category: "language", icon: "🎨" },
+        { name: "Django", category: "framework", icon: "🦄" },
+        { name: "React.js", category: "framework", icon: "⚛️" },
+        // { name: "REST APIs", category: "framework", icon: "🔗" },
+        { name: "Bootstrap", category: "framework", icon: "🅱️" },
+        // { name: "eth-account", category: "framework", icon: "🔐" },
+        // { name: "Git", category: "tool", icon: "🌿" },
+        { name: "GitHub", category: "tool", icon: "🐙" },
+        { name: "VS Code", category: "tool", icon: "💻" },
+        { name: "Vercel", category: "tool", icon: "▲" },
+        // { name: "PostgreSQL", category: "tool", icon: "🐘" },
+        // { name: "Figma", category: "tool", icon: "🎭" },
+    ]
 };
 
 export default INFO;

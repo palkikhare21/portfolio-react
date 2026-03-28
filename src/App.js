@@ -9,6 +9,8 @@ import Projects from "./pages/projects";
 // import ReadArticle from "./pages/readArticle";
 import Contact from "./pages/contact";
 import Notfound from "./pages/404";
+import Cursor from "./components/common/Cursor";
+import SideBar from "./components/common/SideBar";
 
 import { TRACKING_ID } from "./data/tracking";
 import "./app.css";
@@ -22,6 +24,8 @@ function App() {
 
 	return (
 		<div className="App">
+			<Cursor />
+			<SideBar />
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/about" element={<About />} />
