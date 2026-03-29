@@ -6,7 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./styles/project.css";
 
 const Project = (props) => {
-	const { title, description, linkText, link } = props;
+	const { title, description, link } = props;
 
 	let icon = "🚀";
 	if (title.includes("DID")) icon = "🔐";

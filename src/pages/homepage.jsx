@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faChevronDown, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -11,21 +11,21 @@ import SEO from "../data/seo";
 
 import "./styles/homepage.css";
 
+const roles = [
+	"Full Stack Developer",
+	"Software Engineer",
+	"React Frontend Dev",
+	// "Web3 Explorer",
+	"Problem Solver",
+	"CS Undergraduate"
+];
+
 const Homepage = () => {
 	const [typedText, setTypedText] = useState("");
 	const [roleIndex, setRoleIndex] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
 	const [charIndex, setCharIndex] = useState(0);
-    const [counts, setCounts] = useState({ projects: 0, tech: 0 });
-
-	const roles = [
-		"Full Stack Developer",
-		"Software Engineer",
-		"React Frontend Dev",
-		// "Web3 Explorer",
-		"Problem Solver",
-		"CS Undergraduate"
-	];
+	const [counts, setCounts] = useState({ projects: 0, tech: 0 });
 
 	useEffect(() => {
 		window.scrollTo(0, 0);

@@ -12,7 +12,6 @@ return (
 						image={project.image}
 						title={project.title}
 						description={project.description}
-						linkText={project.linkText}
 						link={project.link}
 					/>
 				</div>
