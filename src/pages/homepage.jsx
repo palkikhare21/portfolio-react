@@ -124,7 +124,7 @@ const Homepage = () => {
 
 						<p className="hero-desc">
 							A passionate <span className="hl">Full Stack Developer</span> building modern web apps.
-							Currently working on <span className="hl">DID authentication</span> with Django &amp; Web3.
+							Currently working on <span className="hl">interactive MP Geography visualization tool</span> with Next.js &amp; Django.
 							I love turning complex problems into elegant digital solutions.
 						</p>
 
@@ -174,10 +174,9 @@ const Homepage = () => {
 									functional, and beautifully designed.
 								</p>
 								<p>
-									I'm currently interning and building a <span className="hl">DID (Decentralised Identity)
-									authentication system</span> — a MetaMask wallet signature-based login using
-									Django and the <span className="hl">eth-account</span> library. It's my first deep-dive
-									into Web3 + traditional backend engineering.
+									I'm currently building an <span className="hl">interactive MP Geography visualization tool 
+										</span> with Nest.js & Django. It's my first deep-dive
+									I love turning complex problems into elegant digital solutions.	
 								</p>
 								<p>
 									When I'm not coding, I'm learning new technologies, collaborating on team projects,

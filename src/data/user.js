@@ -14,7 +14,7 @@ const INFO = {
 	homepage: {
 		title: "Palki Khare | Full Stack Developer",
 		description:
-			"A passionate Full Stack Developer building modern web apps. Currently working on DID authentication with Django & Web3. I love turning complex problems into elegant digital solutions.",
+			"A passionate Full Stack Developer building modern web apps. Currently building an interactive MP Geography visualization tool with Next.js , Django & Web3. I love turning complex problems into elegant digital solutions.",
 	},
 
 	about: {
